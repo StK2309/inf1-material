@@ -2,14 +2,7 @@ package main
 
 import "fmt"
 
-// Output:
-// 1
-// 1
-// 2
-// 6
-// 24
-// 120
-func main() {
+func ExampleFactorial() {
 	fmt.Println(Factorial(5))
 	fmt.Println(Factorial(4))
 	fmt.Println(Factorial(3))
@@ -17,3 +10,11 @@ func main() {
 	fmt.Println(Factorial(1))
 
 }
+
+// Output:
+// 1
+// 1
+// 2
+// 6
+// 24
+// 120
