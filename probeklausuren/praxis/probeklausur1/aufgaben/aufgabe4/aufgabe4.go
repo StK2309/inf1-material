@@ -24,3 +24,18 @@ func MaxElements(l1, l2 []int) []int {
 	}
 	return append([]int{max}, MaxElements(l1[1:], l2[1:])...)
 }
+
+/* if len(l1) == 0 {
+		return l2
+	}
+	if len(l2) == 0 {
+		return l1
+	}
+	var max int
+	if l1[0] > l2[0] {
+		max = l1[0]
+	} else {
+		max = l2[0]
+	}
+	return append([]int{max}, MaxElements(l1[1:], l2[1:])...)
+} */

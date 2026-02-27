@@ -22,3 +22,15 @@ func ExcludeStringsBetween(list []string, first, last string) []string {
 	}
 	return []string{}
 }
+
+/* 	for i, s := range list {
+		if s == first {
+			for j := i + 1; j < len(list); j++ {
+				if list[j] == last {
+					return append(list[:i], list[j+1:]...)
+				}
+			}
+		}
+	}
+	return []string{}
+} */

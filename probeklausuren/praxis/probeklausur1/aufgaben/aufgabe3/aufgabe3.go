@@ -16,3 +16,12 @@ func CountOdd(list []int) int {
 	}
 	return CountOdd(list[1:])
 }
+
+/* if len(list) == 0 {
+		return 0
+	}
+	if list[0]%2 == 1 {
+		return 1 + CountOdd(list[1:])
+	}
+	return CountOdd(list[1:])
+} */

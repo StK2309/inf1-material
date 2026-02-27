@@ -19,3 +19,14 @@ func FilterDigits(s string) string {
 	}
 	return result
 }
+
+/* result := ""
+	digits := []string{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+	for i := range s {
+		if !slices.Contains(digits, s[i:i+1]) {
+			result += s[i : i+1]
+		}
+	}
+	return result
+}
+*/

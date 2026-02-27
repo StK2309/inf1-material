@@ -16,6 +16,12 @@ func (c Card) GreaterThan(other Card) bool {
 	return false
 }
 
+/* if c.Suit == other.Suit && c.Rank > other.Rank {
+		return true
+	}
+	return false
+} */
+
 // Vorgegebener Datentyp
 type Card struct {
 	Suit int
