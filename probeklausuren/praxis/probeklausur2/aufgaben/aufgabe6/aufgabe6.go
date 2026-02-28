@@ -13,5 +13,16 @@ package aufgabe6
 func DuplicateSinglets(list []int) []int {
 	result := []int{}
 	// TODO
+	counts := make(map[int]int)
+	for _, num := range list {
+		counts[num]++
+	}
+	for _, num := range list {
+		if counts[num] == 1 {
+			result = append(result, num, num)
+		} else {
+			result = append(result, num)
+		}
+	}
 	return result
 }

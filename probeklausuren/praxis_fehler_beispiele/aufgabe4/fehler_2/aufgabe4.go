@@ -6,16 +6,19 @@ package aufgabe4
 // Falls eine Position nur in einer Liste vorkommt,
 // soll dieses Element ins Ergebnis übernommen werden.
 func ElementProducts(l1, l2 []int) []int {
-	l3 := []int{}
-	längel1 := len(l1)
-	länge2 := len(l2)
-	var vorrübergehend int
-	if len(l1) == 0 || len(l2) == 0 {
-		return []int{}
+	max := len(l1)
+	if len(l2) > max {
+		max = len(l2)
 	}
-	if l1[0] != 0 {
-		vorrübergehend = (l1[0] * l2[0])
-		l3 = append(l3, vorrübergehend)
+	result := make([]int, max)
+	for i := 0; i < max; i++ {
+		if i < len(l1) && i < len(l2) {
+			result[i] = l1[i] * l2[i]
+		} else if i >= len(l1) {
+			result[i] = l2[i]
+		} else if i >= len(l2) {
+			result[i] = l1[i]
+		}
 	}
-	return ElementProducts(l1[1:], l2[1:]) + []int{vorrübergehend}
+	return result
 }

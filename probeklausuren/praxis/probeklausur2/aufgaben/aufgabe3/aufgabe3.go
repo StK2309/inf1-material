@@ -20,8 +20,21 @@ func CountSquares(list []int) int {
 	return count + CountSquares(list[1:])
 }
 
+/* if len(list) == 0 {
+		return 0
+	}
+	count := 0
+	if isSquare(list[0]) {
+		count = 1
+	}
+	return count + CountSquares(list[1:])
+} */
+
 // isSquare returns true if n is a perfect square.
 func isSquare(n int) bool {
 	r := int(math.Sqrt(float64(n)))
 	return r*r == n
+
+	/* r := int(math.Sqrt(float64(n)))
+	return r*r == n */
 }

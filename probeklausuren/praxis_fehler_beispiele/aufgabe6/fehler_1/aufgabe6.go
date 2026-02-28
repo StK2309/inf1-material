@@ -20,7 +20,6 @@ func Duplicates(list []int) []int {
 func Contains(l []int, el int) bool {
 	for _, e := range l {
 		if e == el {
-
 		}
 	}
 	return false
