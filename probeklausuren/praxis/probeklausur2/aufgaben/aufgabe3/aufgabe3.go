@@ -15,7 +15,7 @@ func CountSquares(list []int) int {
 	}
 	count := 0
 	if isSquare(list[0]) {
-		count = 1
+		count++
 	}
 	return count + CountSquares(list[1:])
 }
